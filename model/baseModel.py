@@ -83,8 +83,8 @@ class baseModel():
         return aug_data, aug_label
 
     def train_test(self, train_dataset, test_dataset):
-        train_dataloader = DataLoader(train_dataset, batch_size=self.batchsize, shuffle=True, num_workers=1)  # or num_workers=0? mabey faster
-        test_dataloader = DataLoader(test_dataset, batch_size=self.batchsize, num_workers=1)  # or num_workers=0? mabey faster
+        train_dataloader = DataLoader(train_dataset, batch_size=self.batchsize, shuffle=True, num_workers=0)
+        test_dataloader = DataLoader(test_dataset, batch_size=self.batchsize, num_workers=0)
 
         best_acc = 0
         avg_acc = 0
